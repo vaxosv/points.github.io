@@ -1,10 +1,10 @@
 function Vehicle(x, y) {
-  this.pos = createVector(44, 44);
+  this.pos = createVector(random(width), random(height));
   this.target = createVector(x, y);
   this.vel = p5.Vector.random2D();
   this.acc = createVector();
-  this.r = 4;
-  this.maxspeed = 4;
+  this.r = 3;
+  this.maxspeed = 5;
   this.maxforce = 0.1;
 }
 
@@ -31,9 +31,9 @@ Vehicle.prototype.update = function() {
 }
 
 Vehicle.prototype.show = function() {
-  // let r = random(0, 255)
-  // let g = random(0, 255)
-  // let b = random(0, 255)
+  // let r = random(40, 255)
+  // let g = random(40, 255)
+  // let b = random(40, 255)
   stroke(255);
   strokeWeight(this.r);
   point(this.pos.x, this.pos.y);

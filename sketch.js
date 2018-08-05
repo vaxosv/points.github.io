@@ -1,5 +1,6 @@
 var font;
 var vehicles = [];
+var bull = false
 
 function preload() {
   font = loadFont('./Courgette-Regular.ttf');
@@ -8,8 +9,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(51);
-
-  var points = font.textToPoints('TIKUNA', 180, 410, 180, {
+  var points = font.textToPoints("Programming Is Fun", 80, 210, 60, {
     sampleFactor: 0.25
   });
   textAlign(CENTER);
@@ -28,4 +28,19 @@ function draw() {
     v.update();
     v.show();
   }
+  if (bull) {
+    show()
+  }
+  if(mouseY >= 400){
+    bull = true
+  }
+}
+
+
+function show() {
+  fill(255)
+  noStroke()
+  text("you can't destroy this!! 😜", 100, 100)
+  print("x", mouseX)
+  print("y", mouseY)
 }
