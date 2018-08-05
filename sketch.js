@@ -32,7 +32,7 @@ function draw() {
     show()
   }
   if(mouseY >= 400){
-    bull = true
+    // bull = true
   }
 }
 
