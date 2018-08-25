@@ -9,7 +9,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(51);
-  var points = font.textToPoints("GAAJVI", 80, 210, 60, {
+  var points = font.textToPoints("Programming is fun", 80, 210, 60, {
     sampleFactor: 0.25
   });
   textAlign(CENTER);
